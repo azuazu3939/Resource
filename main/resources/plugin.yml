@@ -1,0 +1,8 @@
+name: Resource
+version: '${project.version}'
+main: azuazu3939.resource.Resource
+api-version: 1.15
+
+permissions:
+  Resource.Use:
+    default: true
