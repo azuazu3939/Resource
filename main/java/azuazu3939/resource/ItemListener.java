@@ -29,7 +29,7 @@ public class ItemListener implements Listener {
         }
     }
 
-    @EventHandler(priority = EventPriority.MONITOR)
+    @EventHandler
     public void onInteract(@NotNull PlayerInteractEvent event) {
 
         if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK) || event.getAction().equals(Action.RIGHT_CLICK_AIR)) {
@@ -43,52 +43,52 @@ public class ItemListener implements Listener {
             String mmid = new Utils().getMythicId(item);
             if (mmid == null) return;
             if (mmid.equalsIgnoreCase("unknownopenbox") && hasPermission(player)) {
-                new unknownopenbox().get(player);
                 item.subtract(1);
+                new unknownopenbox().get(player);
 
             } else if (mmid.equalsIgnoreCase("Xrandombox") && hasPermission(player)) {
-                new Xrandombox().get(player);
                 item.subtract(1);
+                new Xrandombox().get(player);
 
             } else if (mmid.equalsIgnoreCase("Yrandombox") && hasPermission(player)) {
-                new Yrandombox().get(player);
                 item.subtract(1);
+                new Yrandombox().get(player);
 
             } else if (mmid.equalsIgnoreCase("Yunknownopenbox") && hasPermission(player)) {
-                new Yunknownopenbox().get(player);
                 item.subtract(1);
+                new Yunknownopenbox().get(player);;
 
             } else if (mmid.equalsIgnoreCase("Yrandombox_16set") && hasPermission(player)) {
+                item.subtract(1);
                 for (int i = 1; i <= 16; i++) {
                     new Yrandombox().get(player);
                 }
-                item.subtract(1);
 
             } else if (mmid.equalsIgnoreCase("Xrandombox_16set") && hasPermission(player)) {
+                item.subtract(1);
                 for (int i = 1; i <= 16; i++) {
                     new Xrandombox().get(player);
                 }
-                item.subtract(1);
 
             } else if (mmid.equalsIgnoreCase("unknownopenbox_16set") && hasPermission(player)) {
+                item.subtract(1);
                 for (int i = 1; i <= 16; i++) {
                     new unknownopenbox().get(player);
                 }
-                item.subtract(1);
 
             } else if (mmid.equalsIgnoreCase("Yunknownopenbox_16set") && hasPermission(player)) {
+                item.subtract(1);
                 for (int i = 1; i <= 16; i++) {
                     new Yunknownopenbox().get(player);
                 }
-                item.subtract(1);
 
             } else if (mmid.equalsIgnoreCase("afterweaponbox") && hasPermission(player)) {
-                new afterweaponbox().get(player);
                 item.subtract(1);
+                new afterweaponbox().get(player);
 
             } else if (mmid.equalsIgnoreCase("afterweaponboxaxe") && hasPermission(player)) {
-                new afterweaponboxaxe().get(player);
                 item.subtract(1);
+                new afterweaponboxaxe().get(player);
             }
         }
     }
