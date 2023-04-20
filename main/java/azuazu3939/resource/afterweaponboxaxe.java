@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class afterweaponboxaxe {
 
-    public void get(Player player) {
+    public static void get(Player player) {
 
         List<String> s = new ArrayList<>();
         s.add("m");
@@ -21,8 +21,7 @@ public class afterweaponboxaxe {
 
         Random ran = new Random();
         int i = ran.nextInt(6);
-        Random rand = new Random();
-        int count = rand.nextInt(40) + 1;
+        int count = ran.nextInt(40) + 1;
 
         if (s.get(i).equals("m")) {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mlg " + player.getName() + " seira" + count + " 1 1");
@@ -44,7 +43,7 @@ public class afterweaponboxaxe {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mlg " + player.getName() + " ganzanzan" + count + " 1 1");
             Resource.inst().getLogger().info("[Resource_Drop]" + player.getName() + "に、ganzanzan" + count + "を1つ付与しました。");
         }
-        if (s.get(i).equals("l")) {
+        if (s.get(i).equals("t")) {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mlg " + player.getName() + " danzetuha" + count + " 1 1");
             Resource.inst().getLogger().info("[Resource_Drop]" + player.getName() + "に、danzetuha" + count + "を1つ付与しました。");
         }

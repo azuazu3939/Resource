@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class afterweaponbox {
 
-    public void get(Player player) {
+    public static void get(Player player) {
 
         List<String> s = new ArrayList<>();
         s.add("a");
@@ -21,8 +21,7 @@ public class afterweaponbox {
 
         Random ran = new Random();
         int i = ran.nextInt(6);
-        Random rand = new Random();
-        int count = rand.nextInt(40) + 1;
+        int count = ran.nextInt(40) + 1;
 
         if (s.get(i).equals("a")) {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mlg " + player.getName() + " akuaria" + count + " 1 1");

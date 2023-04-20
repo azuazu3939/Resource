@@ -7,7 +7,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class Utils {
 
-    public boolean isMythicItem(ItemStack item) {
+    public static boolean isMythicItem(ItemStack item) {
 
         if (item == null) return false;
         CompoundTag tag = MythicMobs.inst().getVolatileCodeHandler().getItemHandler().getNBTData(item);
@@ -16,7 +16,7 @@ public class Utils {
     }
 
     @Nullable
-    public ItemStack getMythicItem(String string) {
+    public static ItemStack getMythicItem(String string) {
 
         if (MythicMobs.inst().getItemManager().getItem(string).isPresent()) {
 
@@ -26,7 +26,7 @@ public class Utils {
     }
 
     @Nullable
-    public String getMythicId(ItemStack item) {
+    public static String getMythicId(ItemStack item) {
 
         if (item == null) return null;
         CompoundTag tag = MythicMobs.inst().getVolatileCodeHandler().getItemHandler().getNBTData(item);

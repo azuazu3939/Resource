@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class Yunknownopenbox {
 
-    public void get(Player player) {
+    public static void get(Player player) {
 
         Random ran = new Random();
         int get = ran.nextInt(49) + 1;
@@ -33,11 +33,11 @@ public class Yunknownopenbox {
             Resource.inst().getLogger().info("[Resource_Drop]" + player.getName() + "に、sigencustomticketDを1つ付与しました。");
         }
         //YUSetE
-        if (get > 44 && get <= 48) {
+        if (get == 49) {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mlg " + player.getName() + " weaponboxaxe 1 1");
             Resource.inst().getLogger().info("[Resource_Drop]" + player.getName() + "に、weaponboxaxeを1つ付与しました。");
         }
-        if (get == 49) {
+        if (get > 44 && get <= 48) {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "give " + player.getName() + " nether_star 1");
             Resource.inst().getLogger().info("[Resource_Drop]" + player.getName() + "に、nether_starを1つ付与しました。");
         }
